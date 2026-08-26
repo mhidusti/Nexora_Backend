@@ -36,7 +36,9 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/api/v1/', include('accounts.api.v1.urls')),
+    path('market/api/v1/', include('market.api.v1.urls')),
     path("api-auth/", include("rest_framework.urls")),
+    
     
 
     #drf_yasg

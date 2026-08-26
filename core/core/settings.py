@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'accounts',
     'rest_framework_simplejwt',
-
+    'market',
+    
 ]
 
 MIDDLEWARE = [
@@ -125,10 +126,11 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly",
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        "rest_framework.permissions.AllowAny",
+        # 'rest_framework_simplejwt.authentication.JWTAuthentication',
     ]
 }
+
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
